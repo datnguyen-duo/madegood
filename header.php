@@ -21,7 +21,6 @@ $services = get_field("home__services_service", $homepage_id);
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-WH6LFV5QRW');
     </script>
 
@@ -29,31 +28,6 @@ $services = get_field("home__services_service", $homepage_id);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <link rel="stylesheet" href="<?php echo $themeurl ?>/style-inline.css">
-    <link rel="preload" href="<?php echo $themeurl ?>/style.css?v=2" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="<?php echo $themeurl ?>/style.css?v=2"></noscript>
-    <link rel="preload" href="//webfonts3.radimpesko.com/RP-W-ff9519f0-8b59-41be-9ba0-3ff43e58d308" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="//webfonts3.radimpesko.com/RP-W-ff9519f0-8b59-41be-9ba0-3ff43e58d308"></noscript>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
-    <script type="text/javascript" src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/gsap-lib/gsap.min.js" defer></script>
-	 <script src="https://unpkg.com/split-type"></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/gsap-lib/ScrollSmoother.min.js" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/gsap-lib/SplitText.min.js" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/gsap-lib/ScrollTrigger.min.js" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/gsap-lib/ScrollToPlugin.min.js" defer></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js" defer></script>
-	<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrambleTextPlugin.min.js" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/gsap-lib/MotionPathPlugin.min.js" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/gsap-lib/MorphSVGPlugin.min.js" defer></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" defer></script>
-    <script type="text/javascript" src="https://unpkg.com/@barba/core" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/global.min.js?v=3" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/page.min.js?v=3" defer></script>
-	<!-- Service page -->
- 	<link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/service.css">
-	<!-- <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/common-scripts.js" defer></script> -->
-	<!-- Service page -->
 <body <?php body_class("");?>  data-barba="wrapper">
 
 <?php

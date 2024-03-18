@@ -118,7 +118,6 @@ $social_media = get_field('footer_social_media', 'option');
     </div>
 
 </div>
-
 </body>
 
 
