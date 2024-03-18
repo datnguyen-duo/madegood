@@ -1,0 +1,39 @@
+.form_checkout_page_container {
+    display: flex;
+
+    .checkout_fields {
+        width: 100%;
+
+        @media only screen and (min-width: 1250px) {
+            width: 50%;
+        }
+
+        .accordion_holder {
+            &.active_by_default {
+                .accordion_hidden_content {
+                    display: block;
+                }
+            }
+
+            .accordion_title {
+                text-transform: uppercase;
+                font-size: 100px;
+                cursor: pointer;
+            }
+
+            .accordion_hidden_content {
+                display: none;
+
+                .open_next_accordion {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    .checkout_cart {
+        @media only screen and (min-width: 1250px) {
+            width: 50%;
+        }
+    }
+}

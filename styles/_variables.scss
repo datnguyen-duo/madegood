@@ -1,0 +1,26 @@
+$color-yellow: #fec32e;
+$color-red: #ed2b30;
+$color-blue: #54adba;
+$color-tan: #f2eee4;
+
+$mobile-breakpoint: 767px;
+$tablet-breakpoint: 1024px;
+$laptop-breakpoint: 1440px;
+
+@keyframes marquee {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 100%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

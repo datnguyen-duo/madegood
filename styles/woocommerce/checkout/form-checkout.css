@@ -1,0 +1,22 @@
+.form_checkout_page_container {
+  display: flex; }
+  .form_checkout_page_container .checkout_fields {
+    width: 100%; }
+    @media only screen and (min-width: 1250px) {
+      .form_checkout_page_container .checkout_fields {
+        width: 50%; } }
+    .form_checkout_page_container .checkout_fields .accordion_holder.active_by_default .accordion_hidden_content {
+      display: block; }
+    .form_checkout_page_container .checkout_fields .accordion_holder .accordion_title {
+      text-transform: uppercase;
+      font-size: 100px;
+      cursor: pointer; }
+    .form_checkout_page_container .checkout_fields .accordion_holder .accordion_hidden_content {
+      display: none; }
+      .form_checkout_page_container .checkout_fields .accordion_holder .accordion_hidden_content .open_next_accordion {
+        margin-top: 40px; }
+  @media only screen and (min-width: 1250px) {
+    .form_checkout_page_container .checkout_cart {
+      width: 50%; } }
+
+/*# sourceMappingURL=form-checkout.css.map */

@@ -1,0 +1,277 @@
+body.page-template-tmplt-about {
+  #about_intro {
+    padding: 10em 0 0;
+    position: relative;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      padding: 6em 0 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .desktop-only,
+    .mobile-only {
+      z-index: 2;
+      position: relative;
+    }
+    .text-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+
+      span {
+        font-size: 1vw;
+        font-family: "Agipo";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: normal;
+        width: 14vw;
+        padding: 0 1vw;
+        display: inline-block;
+        white-space: initial;
+      }
+    }
+    h1 {
+      height: unset;
+      line-height: 0.8;
+      font-size: 13.5vw;
+      .char {
+        opacity: 0;
+      }
+      @media screen and (max-width: $mobile-breakpoint) {
+        font-size: 20vw;
+
+        width: 90vw;
+      }
+    }
+
+    .mobile-only {
+      p {
+        margin-bottom: 1.5em;
+        padding: 0 30px;
+      }
+      h1 {
+        padding-left: 30px;
+      }
+    }
+
+    .content {
+      max-width: 615px;
+      margin: 6vw 50vw 0 10vw;
+      padding-bottom: 10vw;
+      @media screen and (max-width: $mobile-breakpoint) {
+        margin: 2em 0 0;
+        padding: 0 30px;
+        order: 1;
+      }
+      h4 {
+        &:not(:first-of-type) {
+          margin-top: 0.2em;
+        }
+        span {
+          color: $color-red;
+        }
+      }
+    }
+
+    .fixed {
+      position: absolute;
+      bottom: 0;
+      right: 8vw;
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+      @media screen and (max-width: $mobile-breakpoint) {
+        position: relative;
+        right: 0;
+        transform: none !important;
+        z-index: 1;
+      }
+      .img-wrapper {
+        width: 30vw;
+        height: 35vw;
+        position: relative;
+        @media screen and (max-width: $mobile-breakpoint) {
+          width: 75vw;
+          height: 65vw;
+          margin: 1em auto;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          &:first-of-type {
+            opacity: 1;
+          }
+          &:not(:first-of-type) {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: all 0.3s;
+
+            &.active {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .row {
+        position: relative;
+        align-items: center;
+        justify-content: flex-start;
+        @media screen and (max-width: $mobile-breakpoint) {
+          padding: 0 2em;
+        }
+        h2 {
+          max-width: 340px;
+          margin-top: 0.2em;
+          @media screen and (max-width: $mobile-breakpoint) {
+            max-width: 175px;
+            margin-top: 0;
+          }
+        }
+        .btn-wrapper {
+          width: 70px;
+        }
+        a {
+          left: unset;
+        }
+      }
+    }
+  }
+
+  #values {
+    background: $color-red;
+    color: #fff;
+    padding: 10em 6vw 8em;
+    margin-top: 10em;
+    @media screen and (max-width: $mobile-breakpoint) {
+      margin-top: 4em;
+      padding: 4em 2em;
+    }
+    .row {
+      justify-content: space-between;
+      @media screen and (max-width: $mobile-breakpoint) {
+        flex-direction: column;
+        .col {
+          max-width: 100% !important;
+          h2 {
+            transform: unset !important;
+            transform-origin: unset !important;
+          }
+        }
+      }
+      &.first {
+        .col {
+          @media screen and (max-width: $mobile-breakpoint) {
+            &:not(:last-of-type) {
+              margin-top: 2em;
+            }
+          }
+          &:last-of-type {
+            color: #000;
+            justify-content: flex-end;
+            align-items: flex-start;
+            text-align: right;
+            max-width: 200px;
+            @media screen and (max-width: $mobile-breakpoint) {
+              order: -1;
+            }
+            h2 {
+              transform: rotate(90deg) translateY(100%);
+              transform-origin: 100% 100%;
+            }
+          }
+        }
+      }
+
+      &.last {
+        .col {
+          @media screen and (max-width: $mobile-breakpoint) {
+            &:not(:first-of-type) {
+              margin-top: 2em;
+            }
+          }
+          &:first-of-type {
+            color: #000;
+            justify-content: flex-end;
+            align-items: flex-start;
+            text-align: left;
+            max-width: 200px;
+            h2 {
+              transform: rotate(-90deg) translateY(100%);
+              transform-origin: 0% 100%;
+            }
+          }
+        }
+      }
+      .col {
+        max-width: 23%;
+        width: 100%;
+        h4 {
+          margin-bottom: 0.5em;
+        }
+      }
+    }
+
+    .img-wrapper__lg {
+      position: relative;
+      width: calc(100% - 4vw);
+      height: calc(110vw - 4vw);
+      margin: 10em 0;
+      @media screen and (max-width: $mobile-breakpoint) {
+        margin: 5em 0 5em -1em;
+        width: calc(100vw - 1em);
+        height: 135vw;
+      }
+      display: flex;
+      align-items: center;
+      .jumbotron__image {
+        position: absolute;
+        width: calc(100% - 14vw);
+        height: calc(100% - 10vw);
+        border-radius: 1000px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        object-fit: cover;
+      }
+
+      &::after {
+        content: "";
+        background: url("assets/corevalues-circle.svg") 50% 50% / contain
+          no-repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        @media screen and (max-width: $mobile-breakpoint) {
+          content: unset;
+        }
+      }
+      h1 {
+        height: unset;
+        line-height: 0.8;
+        max-width: 54vw;
+        // margin-left: -2vw;
+        z-index: 1;
+        position: relative;
+        @media screen and (max-width: $mobile-breakpoint) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  footer {
+    background: $color-yellow;
+  }
+}

@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2703.85" height="1763.668" viewBox="0 0 2703.85 1763.668">
+  <defs>
+                  <style type="text/css">
+                   @font-face {
+                   font-family: "Grotzec";
+                   src: url("fonts/GrotzecCond-Bold.otf");
+                   src: url("fonts/GrotzecCond-Bold3.woff2") format("woff2"),
+                       url("fonts/GrotzecCond-Bold3.woff") format("woff");
+                   font-weight: 700;
+                    font-style: normal;
+                    font-display: swap;
+                    }
+                </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_586" data-name="Rectangle 586" width="2695.841" height="1745.071" transform="translate(0 -0.001)" fill="#e1ded5"/>
+    </clipPath>
+  </defs>
+  <g id="Group_4839" data-name="Group 4839" transform="translate(0 9.807)">
+    <text id="F" transform="translate(228.371 706.701) rotate(-62.016)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">F</tspan></text>
+    <text id="O" transform="translate(262.473 640.576) rotate(-53.415)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">O</tspan></text>
+    <text id="L" transform="translate(317.317 567.275) rotate(-45.88)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+    <text id="L-2" data-name="L" transform="translate(372.175 510.637) rotate(-39.963)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+    <text id="O-2" data-name="O" transform="matrix(0.823, -0.567, 0.567, 0.823, 431.202, 460.605)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">O</tspan></text>
+    <text id="W" transform="translate(501.443 409.944) rotate(-28.332)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">W</tspan></text>
+    <text id="_" data-name=" " transform="matrix(0.913, -0.408, 0.408, 0.913, 635.568, 340.158)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+    <text id="U" transform="translate(663.976 326.735) rotate(-21.543)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">U</tspan></text>
+    <text id="S" transform="translate(746.507 294.139) rotate(-18.049)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">S</tspan></text>
+    <text id="_2" data-name=" " transform="translate(832.479 266.723) rotate(-15.816)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+    <text id="_3" data-name=" " transform="matrix(0.967, -0.253, 0.253, 0.967, 863.591, 257.912)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+    <text id="F-2" data-name="F" transform="translate(894.257 249.448) rotate(-12.736)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">F</tspan></text>
+    <text id="O-3" data-name="O" transform="matrix(0.985, -0.173, 0.173, 0.985, 970.457, 231.978)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">O</tspan></text>
+    <text id="L-3" data-name="L" transform="matrix(0.992, -0.125, 0.125, 0.992, 1063.791, 215.761)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+    <g id="Group_4832" data-name="Group 4832">
+      <g id="Group_4831" data-name="Group 4831" clip-path="url(#clip-path)">
+        <text id="L-4" data-name="L" transform="translate(1144.289 205.582) rotate(-4.749)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+        <text id="O-4" data-name="O" transform="translate(1223.264 198.818) rotate(-2.215)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">O</tspan></text>
+        <text id="W-2" data-name="W" transform="translate(1311.537 194.35) rotate(1.153)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">W</tspan></text>
+        <text id="_4" data-name=" " transform="translate(1463.742 198.797) rotate(3.829)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+        <text id="U-2" data-name="U" transform="translate(1495.578 200.46) rotate(5.642)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">U</tspan></text>
+      </g>
+    </g>
+    <text id="S-2" data-name="S" transform="matrix(0.989, 0.146, -0.146, 0.989, 1584.395, 209.191)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">S</tspan></text>
+    <text id="_5" data-name=" " transform="matrix(0.984, 0.179, -0.179, 0.984, 1673.795, 222.858)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+    <text id="_6" data-name=" " transform="matrix(0.98, 0.197, -0.197, 0.98, 1705.695, 228.67)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+    <text id="F-3" data-name="F" transform="translate(1736.995 234.537) rotate(13.262)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">F</tspan></text>
+    <text id="O-5" data-name="O" transform="translate(1813.025 252.148) rotate(16.23)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">O</tspan></text>
+    <text id="L-5" data-name="L" transform="translate(1903.599 278.647) rotate(19.505)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+    <text id="L-6" data-name="L" transform="translate(1979.591 305.492) rotate(22.777)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+    <text id="O-6" data-name="O" transform="matrix(0.894, 0.448, -0.448, 0.894, 2052.068, 335.498)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">O</tspan></text>
+    <text id="W-3" data-name="W" transform="matrix(0.843, 0.537, -0.537, 0.843, 2130.62, 372.443)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">W</tspan></text>
+    <text id="_7" data-name=" " transform="translate(2256.029 455.416) rotate(37.923)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+    <text id="U-3" data-name="U" transform="translate(2280.72 473.2) rotate(42.035)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">U</tspan></text>
+    <text id="S-3" data-name="S" transform="translate(2345.21 530.794) rotate(49.005)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">S</tspan></text>
+    <text id="_8" data-name=" " transform="matrix(0.581, 0.814, -0.814, 0.581, 2402.014, 597.997)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+    <text id="_9" data-name=" " transform="matrix(0.534, 0.845, -0.845, 0.534, 2420.034, 623.191)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+    <text id="F-4" data-name="F" transform="translate(2436.886 646.992) rotate(63.739)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">F</tspan></text>
+    <g id="Group_4834" data-name="Group 4834">
+      <g id="Group_4833" data-name="Group 4833" clip-path="url(#clip-path)">
+        <text id="O-7" data-name="O" transform="matrix(0.278, 0.961, -0.961, 0.278, 2470.75, 712.245)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">O</tspan></text>
+        <text id="L-7" data-name="L" transform="translate(2495.582 797.878) rotate(85.207)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+        <text id="L-8" data-name="L" transform="matrix(-0.102, 0.995, -0.995, -0.102, 2502.481, 873.337)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+      </g>
+    </g>
+    <text id="O-8" data-name="O" transform="translate(2496.281 946.916) rotate(106.953)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">O</tspan></text>
+    <text id="W-4" data-name="W" transform="translate(2476.565 1027.15) rotate(120.395)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">W</tspan></text>
+    <text id="_10" data-name=" " transform="translate(2397.853 1152.491) rotate(129.229)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+    <text id="U-4" data-name="U" transform="matrix(-0.698, 0.716, -0.716, -0.698, 2380.069, 1176.381)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">U</tspan></text>
+    <text id="S-4" data-name="S" transform="translate(2319.53 1238.545) rotate(140.744)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">S</tspan></text>
+    <text id="_11" data-name=" " transform="translate(2249.885 1294.213) rotate(144.591)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+    <text id="_12" data-name=" " transform="translate(2223.936 1312.662) rotate(146.476)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+    <text id="F-5" data-name="F" transform="matrix(-0.862, 0.507, -0.507, -0.862, 2198.419, 1330.375)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">F</tspan></text>
+    <text id="O-9" data-name="O" transform="translate(2132.008 1369.831) rotate(153.717)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">O</tspan></text>
+    <text id="L-9" data-name="L" transform="translate(2047.622 1411.251) rotate(157.569)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+    <text id="L-10" data-name="L" transform="translate(1973.113 1442.015) rotate(160.813)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+    <text id="O-10" data-name="O" transform="translate(1898.745 1468.155) rotate(164.002)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">O</tspan></text>
+    <text id="W-5" data-name="W" transform="translate(1814.5 1493.58) rotate(168.017)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">W</tspan></text>
+    <text id="_13" data-name=" " transform="matrix(-0.988, 0.157, -0.157, -0.988, 1665.437, 1523.634)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+    <g id="Group_4836" data-name="Group 4836">
+      <g id="Group_4835" data-name="Group 4835" clip-path="url(#clip-path)">
+        <text id="U-5" data-name="U" transform="translate(1634.083 1529.099) rotate(172.863)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">U</tspan></text>
+        <text id="S-5" data-name="S" transform="translate(1545.513 1540.208) rotate(175.565)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">S</tspan></text>
+        <text id="_14" data-name=" " transform="matrix(-0.999, 0.046, -0.046, -0.999, 1455.191, 1546.752)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+        <text id="_15" data-name=" " transform="translate(1422.745 1548.243) rotate(178.311)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+        <text id="F-6" data-name="F" transform="translate(1390.549 1549.189) rotate(179.454)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">F</tspan></text>
+        <text id="O-11" data-name="O" transform="translate(1312.39 1549.843) rotate(-177.597)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">O</tspan></text>
+        <text id="L-11" data-name="L" transform="translate(1217.635 1545.739) rotate(-175.004)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+      </g>
+    </g>
+    <text id="L-12" data-name="L" transform="translate(1136.798 1538.696) rotate(-172.544)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+    <text id="O-12" data-name="O" transform="translate(1058.298 1528.666) rotate(-169.841)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">O</tspan></text>
+    <text id="W-6" data-name="W" transform="matrix(-0.97, -0.242, 0.242, -0.97, 971.373, 1514.387)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">W</tspan></text>
+    <text id="_16" data-name=" " transform="translate(824.452 1475.963) rotate(-162.71)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+    <text id="U-6" data-name="U" transform="matrix(-0.942, -0.335, 0.335, -0.942, 794.124, 1467.156)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">U</tspan></text>
+    <text id="S-6" data-name="S" transform="translate(710.593 1437.541) rotate(-156.776)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">S</tspan></text>
+    <text id="_17" data-name=" " transform="matrix(-0.899, -0.437, 0.437, -0.899, 628.2, 1401.478)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+    <text id="_18" data-name=" " transform="matrix(-0.888, -0.461, 0.461, -0.888, 599.323, 1387.447)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+    <text id="F-7" data-name="F" transform="translate(571.329 1373.65) rotate(-149.749)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">F</tspan></text>
+    <text id="O-13" data-name="O" transform="matrix(-0.82, -0.573, 0.573, -0.82, 504.591, 1335.38)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">O</tspan></text>
+    <text id="L-13" data-name="L" transform="matrix(-0.76, -0.65, 0.65, -0.76, 428.524, 1282.124)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+    <text id="L-14" data-name="L" transform="translate(368.454 1231.132) rotate(-133.465)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">L</tspan></text>
+    <text id="O-14" data-name="O" transform="matrix(-0.587, -0.809, 0.809, -0.587, 315.422, 1176.622)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">O</tspan></text>
+    <text id="W-7" data-name="W" transform="matrix(-0.402, -0.916, 0.916, -0.402, 262.602, 1112.157)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">W</tspan></text>
+    <g id="Group_4838" data-name="Group 4838">
+      <g id="Group_4837" data-name="Group 4837" clip-path="url(#clip-path)">
+        <text id="_19" data-name=" " transform="translate(208.529 976.206) rotate(-102.452)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0"> </tspan></text>
+        <text id="U-7" data-name="U" transform="translate(200.226 949.372) rotate(-94.514)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">U</tspan></text>
+        <text id="S-7" data-name="S" transform="translate(192.934 866.273) rotate(-82.73)" fill="#e1ded5" font-size="230" font-family="Grotzec" font-weight="700"><tspan x="0" y="0">S</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

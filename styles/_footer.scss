@@ -1,0 +1,184 @@
+footer {
+  background: $color-red;
+  color: #000;
+  padding-top: 6em;
+  padding-bottom: 0.5em;
+  position: relative;
+  overflow: hidden;
+
+  body.single-case_studies & {
+    display: none;
+  }
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding-top: 4em;
+  }
+  .inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: $mobile-breakpoint) {
+      flex-direction: column;
+    }
+    .col {
+      &:first-of-type,
+      &:last-of-type {
+        width: 200px;
+        text-align: center;
+        img {
+          width: 28px;
+          height: 28px;
+          margin: 0 auto;
+        }
+
+        h6 {
+          margin: 0.2em 0;
+        }
+      }
+
+      &:first-of-type {
+        @media screen and (max-width: $mobile-breakpoint) {
+          margin: 1.5em 0;
+        }
+
+        .row {
+          justify-content: center;
+          a {
+            display: flex;
+            padding: 0 2px;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        @media screen and (max-width: $mobile-breakpoint) {
+          order: -1;
+          max-width: 50%;
+        }
+      }
+
+      .logo {
+        display: flex;
+        max-width: 350px;
+        img {
+          width: 100%;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        a {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 0 2em 1em;
+    justify-content: space-between;
+    margin: 17vw 0 0;
+    @media screen and (max-width: $mobile-breakpoint) {
+      margin: 4em 0 0;
+      flex-wrap: wrap;
+      padding: 0 0 1em;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      width: 27vw;
+      @media screen and (max-width: $mobile-breakpoint) {
+        width: 50%;
+        flex-direction: column;
+      }
+      &:last-of-type {
+        justify-content: flex-end;
+        @media screen and (max-width: $mobile-breakpoint) {
+          li {
+            &:last-of-type {
+              order: -1;
+            }
+          }
+        }
+      }
+      li {
+        font-family: "GrotzecPoster-CondensedBold, Grotzec Poster";
+        font-size: 2.8vw;
+        margin: 0 1.5vw;
+        text-transform: uppercase;
+        @media screen and (max-width: $mobile-breakpoint) {
+          font-size: 26px;
+        }
+      }
+    }
+
+    > div {
+      max-width: calc(100vw - 60vw - 4em);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      padding: 0 4em;
+      @media screen and (max-width: $mobile-breakpoint) {
+        order: 1;
+        max-width: 100%;
+        padding: 0;
+        padding-top: 10em;
+      }
+      &::before {
+        content: "";
+        width: calc(100vw - 60vw - 4em);
+        height: calc(100vw - 60vw - 4em);
+        position: absolute;
+        left: 0;
+        bottom: calc(((100vw - 60vw + 4em) / 2) * -1);
+        background: url("assets/circle-subscribe.svg");
+        transform: translateY(calc(50% + 1em));
+        animation: spin 20s linear infinite reverse;
+        @media screen and (max-width: $mobile-breakpoint) {
+          width: 100vw;
+          height: 100vw;
+          bottom: calc(((100vw + 5em) / 2) * -1);
+        }
+      }
+      form {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        position: relative;
+        @media screen and (max-width: $mobile-breakpoint) {
+          width: 70%;
+        }
+        .wpcf7-form-control-wrap {
+          width: 100%;
+          input {
+            width: 100%;
+            padding: 0.5em 2px;
+            color: #000;
+            &::placeholder {
+              color: #000;
+            }
+          }
+        }
+        .wpcf7-submit {
+          position: absolute;
+          right: 0;
+          background: url("assets/btn__arrow.svg") no-repeat 50% 50% / contain;
+          bottom: 5px;
+          height: 33px;
+          width: 53px;
+          padding: 0;
+          border: none;
+          margin: auto 0;
+        }
+      }
+
+      .wpcf7-spinner {
+        display: none;
+      }
+    }
+  }
+}

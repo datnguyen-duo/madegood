@@ -1,0 +1,135 @@
+.single-case_studies {
+  /* Slider */
+
+  .slick-slider {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+    width: 55vh;
+    height: 90vh;
+    @media screen and (max-width: $mobile-breakpoint) {
+      width: 60vw;
+      height: 120vw;
+      align-items: center;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url("assets/madegood_phonecutout_updated.png") 50% / contain
+        no-repeat;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+  .slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding: 0;
+    margin: 2.5vh 0 0;
+    width: 73%;
+    height: 95%;
+    border-radius: 40px;
+    background: #000;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      width: 55vw;
+      height: 113vw;
+      margin: 0;
+    }
+    &:focus {
+      outline: none;
+    }
+
+    &.dragging {
+      cursor: pointer;
+      cursor: hand;
+    }
+  }
+  .slick-slider .slick-track,
+  .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  .slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+
+    &:after {
+      clear: both;
+    }
+
+    .slick-loading & {
+      visibility: hidden;
+    }
+  }
+  .slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    object-fit: contain;
+    width: 50vh;
+    [dir="rtl"] & {
+      float: right;
+    }
+    img {
+      display: block;
+    }
+    &.slick-loading img {
+      display: none;
+    }
+
+    display: none;
+
+    &.dragging img {
+      pointer-events: none;
+    }
+
+    .slick-initialized & {
+      display: block;
+    }
+
+    .slick-loading & {
+      visibility: hidden;
+    }
+
+    .slick-vertical & {
+      display: block;
+      height: auto;
+      border: 1px solid transparent;
+    }
+  }
+  .slick-arrow.slick-hidden {
+    display: none;
+  }
+}
