@@ -3050,6 +3050,7 @@ form .ajax-loader {
   margin-bottom: 2rem; }
   .product__card--image img {
     width: 100%;
+    height: auto;
     transition: opacity 0.3s ease-in-out; }
     .product__card--image img:nth-child(2) {
       position: absolute;
