@@ -102,7 +102,7 @@ $work_examples_desc = get_field('work_examples_description');
                             $related_featured_image = get_the_post_thumbnail($related->id,'large');
                         }
                         ?>
-                        <a class="product__card--item" href="/madegood/product/<?php echo $related_data['slug'] ?>" data-barba-prevent="self">
+                        <a class="product__card--item" href="/product/<?php echo $related_data['slug'] ?>" data-barba-prevent="self">
                             <?php if( $related_featured_image ): ?>
                                 <div class="product__card--image">
                                     <?= $related_featured_image; ?>
