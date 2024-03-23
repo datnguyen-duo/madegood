@@ -300,6 +300,20 @@
             }
           }
         }
+        &:nth-child(6) {
+          //SHOP
+          margin-left: 7vw;
+          body.woocommerce-page & {
+            // pointer-events: none;
+            .hover__headline {
+              .major {
+                > div {
+                  color: $color-yellow;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

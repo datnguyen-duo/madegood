@@ -210,6 +210,10 @@ Version: 2
         margin-left: -7vw; }
         body.page-template-tmplt-contact .nav-container .inner ul h1:nth-child(5) .hover__headline .major > div, body.page-template-tmplt-follow-us .nav-container .inner ul h1:nth-child(5) .hover__headline .major > div, body.page-template-tmplt-find-us .nav-container .inner ul h1:nth-child(5) .hover__headline .major > div {
           color: #fec32e; }
+      .nav-container .inner ul h1:nth-child(6) {
+        margin-left: 7vw; }
+        body.woocommerce-page .nav-container .inner ul h1:nth-child(6) .hover__headline .major > div {
+          color: #fec32e; }
 
 footer {
   background: #ed2b30;
@@ -2910,7 +2914,10 @@ form .ajax-loader {
     width: 100%;
     flex-shrink: 0; }
     .product__gallery .slick-slide img {
-      width: 100%; }
+      width: 100%;
+      aspect-ratio: 1;
+      height: 100%;
+      object-fit: cover; }
   .product__gallery .slick-arrow {
     position: absolute;
     top: 0;
