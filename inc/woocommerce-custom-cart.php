@@ -62,7 +62,7 @@
                 </div>
 
                 <?php if( $woocommerce_cart && $checkout_page && $checkout_page->post_status == 'publish' ): ?>
-                    <a href="<?= $checkout_url; ?>" class="cart__checkout btn">Checkout</a>
+                    <a href="<?= $checkout_url; ?>" class="cart__checkout btn" data-barba-prevent="self">Checkout</a>
                 <?php endif; ?>
             </div>
         </div>
