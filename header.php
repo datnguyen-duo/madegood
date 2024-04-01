@@ -8,7 +8,11 @@ $templates = wp_get_theme()->get_page_templates();
 
 $homepage_id = get_option( 'page_on_front' );
 $services = get_field("home__services_service", $homepage_id);
-
+if ($template_path) {
+    $namespace = isset($templates[$template_path]) ? $templates[$template_path] : 'cart';
+} else {
+    $namespace = get_post_type();
+}
 ?>
 
 <!DOCTYPE html>
@@ -200,8 +204,5 @@ $services = get_field("home__services_service", $homepage_id);
     <div></div>
     <div></div>
 </div>
-<div id="smooth-wrapper" class="barba-container" data-barba="container" data-barba-namespace="<?php if ($template_path) {echo $templates[$template_path];} else {echo get_post_type();}?>">
+<div id="smooth-wrapper" class="barba-container" data-barba="container" data-barba-namespace="<?php echo $namespace; ?>">
     <main id="smooth-content" class="loading">
-
-
-

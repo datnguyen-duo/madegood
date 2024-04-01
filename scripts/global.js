@@ -2,7 +2,6 @@
   FIXED SCRIPTS
 --------------------------------------------------------------------------------- */
 let scroller;
-
 document.addEventListener("DOMContentLoaded", function (event) {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
@@ -748,6 +747,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
           var scrollContainer = next.container;
           firstSection = scrollContainer.querySelectorAll("section")[0];
           imagesLoaded(firstSection, function () {
+            loadShopScripts(scrollContainer);
+            shopLoader(scrollContainer);
+          });
+        },
+      },
+      {
+        namespace: "cart",
+        afterEnter({ next }) {
+          var scrollContainer = next.container;
+          firstSection = scrollContainer.querySelectorAll("section")[0];
+          imagesLoaded(firstSection, function () {
+            console.log(firstSection);
             loadShopScripts(scrollContainer);
             shopLoader(scrollContainer);
           });
