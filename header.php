@@ -34,13 +34,6 @@ if ($template_path) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
 <body <?php body_class("");?>  data-barba="wrapper">
 
-<?php
-// $checkoutPage = ( is_checkout() && empty( is_wc_endpoint_url('order-received')) );
-// if( !$checkoutPage ):
-//     render_shopping_cart();
-// endif; 
-?>
-
 <?php if( have_rows('header_main', 'option') ):
     the_row(); 
     $logo = get_sub_field('logo');
