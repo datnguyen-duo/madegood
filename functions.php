@@ -11,9 +11,9 @@ function load_stylesheets()
 
 function load_scripts()
 {
-//    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', [], false, array(
-//        'strategy' => 'defer'
-//    ));
+    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', [], false, array(
+        'strategy' => 'defer'
+    ));
     // wp_enqueue_script('jquery-validate', get_theme_file_uri('/scripts/plugins/jquery.validate.min.js'), NULL, '1', true);
     // wp_enqueue_script('select2', get_theme_file_uri('/scripts/plugins/select2.js'), NULL, '1', true);
 	wp_enqueue_script('images-loaded', 'https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js', [], false, array(
