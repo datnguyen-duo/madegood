@@ -91,6 +91,9 @@ $social_media = get_field('footer_social_media', 'option');
     <?php render_shopping_cart(); ?>
 </div>
 
+<?php wp_footer(); ?>
 </body>
+
+</html>
 
 
