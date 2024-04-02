@@ -10,6 +10,7 @@
     top: 1em;
     height: 42px;
   }
+
   &.nav-icon__logo {
     left: 1.5em;
     max-width: 58px;
@@ -18,7 +19,12 @@
       max-width: 46px;
     }
   }
-
+  &.nav-icon__cart-toggle {
+    right: 5.5em;
+    color: $color-tan;
+    mix-blend-mode: difference;
+    cursor: pointer;
+  }
   &.nav-icon__toggle {
     mix-blend-mode: difference;
     right: 1.5em;

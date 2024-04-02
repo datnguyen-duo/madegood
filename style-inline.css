@@ -477,11 +477,36 @@ a {
   .cart__item {
     display: grid;
     grid-template-columns: 40% 1fr;
-    gap: 2rem; }
-    .cart__item:not(:last-of-type) {
-      margin-bottom: 2rem; }
+    gap: 2rem;
+    margin-bottom: 2rem; }
+    .cart__item--info {
+      align-self: center; }
     .cart__item p {
       margin-top: 0.2rem; }
+    .cart__item img {
+      max-width: 100%;
+      height: auto; }
+    .cart__item .row {
+      align-items: flex-end;
+      margin: 0.5rem 0 1rem; }
+      .cart__item .row input {
+        margin: 0 1rem 0 0.5rem;
+        background-color: transparent;
+        width: 50px;
+        font: inherit;
+        border: none;
+        border-bottom: 2px solid #000;
+        padding: 0.2rem; }
+    .cart__item--remove {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      font: inherit;
+      background: transparent;
+      color: #000;
+      text-decoration: underline;
+      margin-top: 0.5rem;
+      font-size: 14px; }
   .cart__footer {
     padding: 2rem;
     text-align: center;

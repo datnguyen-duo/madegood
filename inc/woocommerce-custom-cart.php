@@ -43,10 +43,12 @@
 
                             <div class="cart__item--info">
                                 <h4><?= $item_name; ?></h4>
-                                <p>Quantity:</p>
-                                <input data-item-id="<?= $cart_item_key ?>" class="cart__item--quantity-input" type="number" value="<?= $quantity ?>" min="1">
-                                <p>Price: <?= $currency_symbol; ?><?= ($price * $quantity) ?></p>
-                                <button class="cart__item--remove" data-target="<?= $cart_item_key ?>">Remove</button>
+                                <div class="row">
+                                    <p>Quantity:</p>
+                                    <input data-item-id="<?= $cart_item_key ?>" class="cart__item--quantity-input" type="number" value="<?= $quantity ?>" min="1">
+                                </div>
+                                <p class="price">Price: <?= $currency_symbol; ?><?= ($price * $quantity) ?></p>
+                                <button class="cart__item--remove linke" data-target="<?= $cart_item_key ?>">Remove</button>
                             </div>
                         </div>
                     <?php endforeach; ?>

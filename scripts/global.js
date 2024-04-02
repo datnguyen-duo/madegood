@@ -758,7 +758,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
           var scrollContainer = next.container;
           firstSection = scrollContainer.querySelectorAll("section")[0];
           imagesLoaded(firstSection, function () {
-            console.log(firstSection);
             loadShopScripts(scrollContainer);
             shopLoader(scrollContainer);
           });
@@ -938,4 +937,10 @@ function loadGlobalScripts(scrollContainer) {
       });
     });
   }
+
+  cartToggle = document.querySelector(".nav-icon__cart-toggle");
+
+  cartToggle.addEventListener("click", function () {
+    document.body.classList.toggle("init__cart");
+  });
 }

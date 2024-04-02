@@ -42,6 +42,8 @@ if ($template_path) {
         <a href="/"><img src="<?php echo esc_url( $logo['url'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>" width="59" height="55"/></a>
     </div>
 
+    <p class="nav-icons nav-icon__cart-toggle link">Cart</p>
+
     <div class="nav-icons nav-icon__toggle link">
         <div class="line"></div>
         <div class="line"></div>
