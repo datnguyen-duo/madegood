@@ -8,61 +8,37 @@ $templates = wp_get_theme()->get_page_templates();
 
 $homepage_id = get_option( 'page_on_front' );
 $services = get_field("home__services_service", $homepage_id);
-
+if ($template_path) {
+    $namespace = isset($templates[$template_path]) ? $templates[$template_path] : 'cart';
+} else {
+    $namespace = get_post_type();
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WH6LFV5QRW"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-WH6LFV5QRW');
-    </script>
-
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-KRDSZDHN');</script>
+	<!-- End Google Tag Manager -->
     <?php wp_head();?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <link rel="stylesheet" href="<?php echo $themeurl ?>/style-inline.css">
-    <link rel="preload" href="<?php echo $themeurl ?>/style.css?v=2" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="<?php echo $themeurl ?>/style.css?v=2"></noscript>
-    <link rel="preload" href="//webfonts3.radimpesko.com/RP-W-ff9519f0-8b59-41be-9ba0-3ff43e58d308" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="//webfonts3.radimpesko.com/RP-W-ff9519f0-8b59-41be-9ba0-3ff43e58d308"></noscript>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
-    <script type="text/javascript" src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/gsap-lib/gsap.min.js" defer></script>
-	 <script src="https://unpkg.com/split-type"></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/gsap-lib/ScrollSmoother.min.js" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/gsap-lib/SplitText.min.js" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/gsap-lib/ScrollTrigger.min.js" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/gsap-lib/ScrollToPlugin.min.js" defer></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js" defer></script>
-	<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrambleTextPlugin.min.js" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/gsap-lib/MotionPathPlugin.min.js" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/gsap-lib/MorphSVGPlugin.min.js" defer></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" defer></script>
-    <script type="text/javascript" src="https://unpkg.com/@barba/core" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/global.min.js?v=3" defer></script>
-    <script type="text/javascript" src="<?php echo $themeurl ?>/scripts/page.min.js?v=3" defer></script>
-	<!-- Service page -->
- 	<link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/service.css">
-	<!-- <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/common-scripts.js" defer></script> -->
-	<!-- Service page -->
+	
+<!-- 	<link type="text/css" rel="stylesheet" href="https://madegood.world/wp-content/themes/madegoodco/assets/service.css"> -->
+<!-- 	<script src="https://unpkg.com/split-type"></script> -->
+<!-- 	<script type="text/javascript" src="https://madegood.world/wp-content/themes/madegoodco/assets/common-scripts.js" defer></script> -->
+	
 <body <?php body_class("");?>  data-barba="wrapper">
-
-<?php
-// $checkoutPage = ( is_checkout() && empty( is_wc_endpoint_url('order-received')) );
-// if( !$checkoutPage ):
-//     render_shopping_cart();
-// endif; 
-?>
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRDSZDHN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <?php if( have_rows('header_main', 'option') ):
     the_row(); 
     $logo = get_sub_field('logo');
@@ -70,6 +46,8 @@ $services = get_field("home__services_service", $homepage_id);
     <div class="nav-icons nav-icon__logo">
         <a href="/"><img src="<?php echo esc_url( $logo['url'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>" width="59" height="55"/></a>
     </div>
+
+    <p class="nav-icons nav-icon__cart-toggle link">Cart</p>
 
     <div class="nav-icons nav-icon__toggle link">
         <div class="line"></div>
@@ -226,8 +204,5 @@ $services = get_field("home__services_service", $homepage_id);
     <div></div>
     <div></div>
 </div>
-<div id="smooth-wrapper" class="barba-container" data-barba="container" data-barba-namespace="<?php if ($template_path) {echo $templates[$template_path];} else {echo get_post_type();}?>">
+<div id="smooth-wrapper" class="barba-container" data-barba="container" data-barba-namespace="<?php echo $namespace; ?>">
     <main id="smooth-content" class="loading">
-
-
-

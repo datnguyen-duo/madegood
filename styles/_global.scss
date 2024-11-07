@@ -494,6 +494,17 @@ a {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in-out;
+
+  &--updating {
+    .cart__loader {
+      display: block;
+    }
+
+    .cart__empty-message {
+      display: none;
+    }
+  }
+
   body.init__cart & {
     opacity: 1;
     pointer-events: all;
@@ -509,6 +520,22 @@ a {
     z-index: -1;
   }
 
+  &__loader {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 2;
+    display: none;
+  }
+
+  &__empty-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+
   &__container {
     background: $color-yellow;
     width: 50%;
@@ -516,6 +543,7 @@ a {
     display: flex;
     flex-direction: column;
     margin-left: auto;
+    position: relative;
   }
   &__headline {
     text-align: center;
@@ -561,13 +589,49 @@ a {
     display: grid;
     grid-template-columns: 40% 1fr;
     gap: 2rem;
+    margin-bottom: 2rem;
 
     &:not(:last-of-type) {
-      margin-bottom: 2rem;
+    }
+
+    &--info {
+      align-self: center;
     }
 
     p {
       margin-top: 0.2rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .row {
+      align-items: flex-end;
+      margin: 0.5rem 0 1rem;
+      input {
+        margin: 0 1rem 0 0.5rem;
+        background-color: transparent;
+        width: 50px;
+
+        font: inherit;
+        border: none;
+        border-bottom: 2px solid #000;
+        padding: 0.2rem;
+      }
+    }
+
+    &--remove {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      font: inherit;
+      background: transparent;
+      color: #000;
+      text-decoration: underline;
+      margin-top: 0.5rem;
+      font-size: 14px;
     }
   }
 
@@ -592,5 +656,23 @@ a {
 .mobile-only {
   @media screen and (min-width: $mobile-breakpoint) {
     display: none;
+  }
+}
+
+.spinner {
+  border: 4px solid #f3f3f3; /* Light grey */
+  border-top: 4px solid $color-red; /* Blue */
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

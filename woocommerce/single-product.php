@@ -25,7 +25,7 @@ $work_examples_desc = get_field('work_examples_description');
                 <?php if( $gallery ): ?>
                     <div class="product-gallery--images">
                         <?php foreach ( $gallery as $image ): ?>
-                            <div class="product-gallery--image"> 
+                            <div class="product-gallery--image">
                                 <?php echo wp_get_attachment_image($image, 'full', '', array('loading' => 'lazy') ); ?>
                             </div>
                         <?php endforeach; ?>
@@ -39,6 +39,7 @@ $work_examples_desc = get_field('work_examples_description');
             <div class="product__info">
                 <h2 class="product__title"><?php the_title(); ?></h2>
                 <h3 class="product__price"><?= get_woocommerce_currency_symbol().$product->get_price() ?></h3>
+
                 <div class="row">
                     <label for="">
                         Select Size:
@@ -60,7 +61,11 @@ $work_examples_desc = get_field('work_examples_description');
                 <div class="row">
                     <label for="quantity">Quantity:</label>
                     <input type="number" id="quantity" name="quantity" value="1" min="1">
-                    <button class="add-to-cart link btn" data-product-id="<?= get_the_ID(); ?>">Add To Cart</button>
+                    <button class="add-to-cart link btn"
+                            data-product-id="<?= ($variations) ? $variations[0]['variation_id'] : get_the_ID() ?>"
+                            data-quantity="1">
+                        Add To Cart
+                    </button>
                 </div>
                 <div class="product__description">
                     <?php the_content(); ?>
@@ -80,7 +85,7 @@ $work_examples_desc = get_field('work_examples_description');
         $args['related_products'] = array_filter($args['related_products'], function($related_product) use ($product) {
             return $related_product->get_id() !== $product->get_id();
         });
-        
+
         $args['related_products'] = wc_products_array_orderby( $args['related_products'], $args['orderby'], $args['order'] );
 
         if( $args['related_products'] ): ?>
@@ -102,7 +107,7 @@ $work_examples_desc = get_field('work_examples_description');
                             $related_featured_image = get_the_post_thumbnail($related->id,'large');
                         }
                         ?>
-                        <a class="product__card--item" href="/madegood/product/<?php echo $related_data['slug'] ?>" data-barba-prevent="self">
+                        <a class="product__card--item" href="/product/<?php echo $related_data['slug'] ?>" data-barba-prevent="self">
                             <?php if( $related_featured_image ): ?>
                                 <div class="product__card--image">
                                     <?= $related_featured_image; ?>

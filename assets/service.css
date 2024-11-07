@@ -417,6 +417,19 @@ body,html{height: 100%;}
     font-family: 'AgipoBold';
 }
 
+.work-single-slider-item-wrap .slick-slide > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.work-single-slider-item-wrap .slick-track {
+    display: flex;
+}
+
+
+
 /* =======================================================================================================
 ============================================ Responsive style ========================================== */
 

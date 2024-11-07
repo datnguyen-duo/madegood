@@ -54,7 +54,7 @@ function print_products($query){
             <?php endif; ?>
 
             <p class="product__card--title"><?php the_title(); ?></p>
-            <p class="product__card--price"><?= get_woocommerce_currency_symbol().$product_price; ?></p>
+            <h5 class="product__card--price"><?= get_woocommerce_currency_symbol().$product_price; ?></h5>
 
         </a>
     <?php endwhile; wp_reset_postdata();

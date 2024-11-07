@@ -87,38 +87,13 @@ $social_media = get_field('footer_social_media', 'option');
     <a class="plus-icon" href="/portfolio/behind-the-good/"></a></div>
 </ul>
 
-<div class="cart">
-
-    <div class="cart__container">
-        <div class="cart__headline">
-            <h2>Cart</h2>
-            <div class="cart__close link"></div>
-        </div>
-
-        <div class="cart__items">
-            <div class="cart__item">
-                <div class="cart__item--image">
-                    <img src="<?php echo $themeurl; ?>/assets/poster.jpg" alt="product-image">
-                </div>
-                <div class="cart__item--info">
-                    <h4>Product Name</h4>
-                    <p>Quantity: 1</p>
-                    <p>Price: $10.00</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="cart__footer">
-            <div class="cart__total">
-                <h5>Total</h5>
-                <h2>$10.00</h2>
-            </div>
-            <a href="/cart/" class="cart__checkout btn">Checkout</a>
-        </div>
-    </div>
-
+<div id="cart-response">
+    <?php render_shopping_cart(); ?>
 </div>
 
+<?php wp_footer(); ?>
 </body>
+
+</html>
 
 

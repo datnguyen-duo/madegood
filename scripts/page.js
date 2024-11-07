@@ -1140,11 +1140,15 @@ function loadShopScripts(scrollContainer) {
   var addToCartButton = document.querySelector(".add-to-cart"),
     cartClose = document.querySelector(".cart__close");
 
-  addToCartButton.addEventListener("click", function () {
-    document.body.classList.add("init__cart");
-  });
+  if (addToCartButton) {
+    addToCartButton.addEventListener("click", function () {
+      document.body.classList.add("init__cart");
+    });
+  }
 
-  cartClose.addEventListener("click", function () {
-    document.body.classList.remove("init__cart");
-  });
+  if (cartClose) {
+    cartClose.addEventListener("click", function () {
+      document.body.classList.remove("init__cart");
+    });
+  }
 }

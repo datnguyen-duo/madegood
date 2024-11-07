@@ -2,7 +2,6 @@
   FIXED SCRIPTS
 --------------------------------------------------------------------------------- */
 let scroller;
-
 document.addEventListener("DOMContentLoaded", function (event) {
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
@@ -539,12 +538,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
       });
     }
-    gtag("event", "page_view", {
-      page_title: document.title,
-      page_location: window.location.href,
-      page_path: window.location.pathname,
-      send_to: "G-WH6LFV5QRW",
-    });
   });
 
   barba.init({
@@ -753,6 +746,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
           });
         },
       },
+      {
+        namespace: "cart",
+        afterEnter({ next }) {
+          var scrollContainer = next.container;
+          firstSection = scrollContainer.querySelectorAll("section")[0];
+          imagesLoaded(firstSection, function () {
+            loadShopScripts(scrollContainer);
+            shopLoader(scrollContainer);
+          });
+        },
+      },
     ],
   });
 });
@@ -927,4 +931,10 @@ function loadGlobalScripts(scrollContainer) {
       });
     });
   }
+
+  cartToggle = document.querySelector(".nav-icon__cart-toggle");
+
+  cartToggle.addEventListener("click", function () {
+    document.body.classList.toggle("init__cart");
+  });
 }

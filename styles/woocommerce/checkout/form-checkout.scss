@@ -1,39 +1,99 @@
-.form_checkout_page_container {
-    display: flex;
+.woocommerce-checkout {
+  form.checkout {
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    grid-template-areas: "a b";
+    gap: 4rem;
+    padding: 8rem 2rem 4rem;
 
-    .checkout_fields {
-        width: 100%;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      grid-template-areas: "a" "b";
+    }
+  }
 
-        @media only screen and (min-width: 1250px) {
-            width: 50%;
-        }
+  .woocommerce-form-coupon-toggle,
+  .woocommerce-notices-wrapper,
+  .woocommerce-info,
+  .woocommerce-terms-and-conditions-wrapper,
+  .woocommerce-SavedPaymentMethods-saveNew {
+    display: none !important;
+  }
 
-        .accordion_holder {
-            &.active_by_default {
-                .accordion_hidden_content {
-                    display: block;
-                }
-            }
+  #customer_details {
+    .col-1 {
+      width: 100%;
 
-            .accordion_title {
-                text-transform: uppercase;
-                font-size: 100px;
-                cursor: pointer;
-            }
+      .form-row {
+        margin-top: 2rem;
+      }
+    }
+    .col-2 {
+      display: none;
+    }
+  }
 
-            .accordion_hidden_content {
-                display: none;
+  #order_review_heading {
+    grid-area: b;
+  }
+  #order_review {
+    grid-area: b;
+    padding-top: 4rem;
+    .shop_table {
+      margin-bottom: 0;
+    }
+    .cart_item {
+      .variation {
+        display: none;
+      }
+    }
+  }
 
-                .open_next_accordion {
-                    margin-top: 40px;
-                }
-            }
-        }
+  #payment {
+    background-color: transparent;
+    * {
+      font: inherit !important;
     }
 
-    .checkout_cart {
-        @media only screen and (min-width: 1250px) {
-            width: 50%;
-        }
+    .form-row {
+      padding: 0;
     }
+
+    .wc_payment_methods {
+      border: none !important;
+    }
+    .payment_box {
+      background-color: transparent !important;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      &::before {
+        border: none !important;
+      }
+    }
+
+    #place_order {
+      background-color: #fec32e;
+
+      color: #fff;
+      border: none;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+      float: unset;
+      width: 100%;
+      margin-top: 1rem;
+      border-radius: 100px;
+      &:hover {
+        background-color: #ed2b30;
+      }
+    }
+  }
+}
+
+.woocommerce-order {
+  padding: 8rem 2rem 4rem;
+  .woocommerce-notice,
+  h2 {
+    margin-bottom: 1rem;
+  }
 }

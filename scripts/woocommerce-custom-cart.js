@@ -1,96 +1,190 @@
 (function ($) {
-    var customSideCart = $(".custom_side_cart");
-    var customSideCartOverlay = $(".custom_cart_overlay");
-    var customSideCartOpener = $(".custom_side_cart_opener");
-    var bookableSingleProductPage = $('.single_booking_product_page_container');
-    var checkOutPage = $('.woocommerce-checkout');
-
     function openSideCart() {
-        customSideCart.addClass('active');
-        customSideCartOverlay.fadeIn();
+        $("body").addClass('init__cart')
     }
 
     function closeSideCart() {
-        customSideCart.removeClass('active');
-        customSideCartOverlay.fadeOut();
+        $("body").removeClass('init__cart')
     }
 
-    customSideCartOpener.on("click", function () {
-        openSideCart();
-    });
+    /**
+     * Open Cart on open cart selector click
+     * **/
+    $(document).on('click', '.open-cart', function () {
+        openSideCart()
+    })
 
-    customSideCart.find(".close_cart").on("click", function () {
-        closeSideCart();
-    });
+    /**
+     * Update element data-product-id with add to cart selector
+     * on variation select input change
+     * **/
+    $(document).on('change', 'input[name="variation_id"]', function () {
+        let variationID = $(this).val()
+        $('.add-to-cart').data('product-id', variationID).attr('data-product-id', variationID)
+    })
 
-    customSideCartOverlay.on('click', function(){
-        closeSideCart();
-    });
+    /**
+     * Update element data-quantity-id with add to cart selector
+     * on quantity input change
+     * **/
+    $(document).on('change', 'input[name="quantity"]', function () {
+        let quantity = $(this).val()
+        $('.add-to-cart').data('quantity', quantity).attr('data-quantity', quantity)
+    })
 
-    //Update items in shopping cart
-    function updateShoppingCart(isItemAddedToCart) {
-        var responseDiv = document.getElementById("response");
+    /**
+     * Close CART on close cart selector click
+     * **/
+    $(document).on('click', ".cart__close", function () {
+        closeSideCart()
+    })
+
+    /**
+     * Close CART on ESC key press
+     * **/
+    $(document).keyup(function(e) {
+        if( e.key === "Escape" ) {
+            closeSideCart()
+        }
+    })
+
+    /**
+     * ADD to CART on selector click
+     * **/
+    $(document).on('click', '.add-to-cart', function () {
+        let productID = $(this).data('product-id')
+        let quantity = ($(this).data('quantity')) ? $(this).data('quantity') : 1
+        addToCart(productID, quantity)
+    })
+
+    /**
+     * Remove PRODUCT from CART on selector click
+     * **/
+    $(document).on("click", ".cart__item--remove", function (event) {
+        event.preventDefault()
+        let cartItemKey = $(this).data("target")
+        removeItemFromCart(cartItemKey)
+    })
+
+    /**
+     * ADD PRODUCT to CART function
+     * **/
+    function addToCart(productID, quantity = 1) {
+        cartIsUpdating(true)
 
         $.ajax({
-            url: customSideCart.data("action"),
+            url: $(".cart").data("action"),
             data: {
-                action: "updateshoppingcart",
-                addedToCart: isItemAddedToCart
-            }, // form data
-            type: "POST", // POST
+                action: "woo_custom_cart_add_to_cart",
+                productID: productID,
+                quantity: quantity,
+            },
+            type: "POST",
             beforeSend: function (xhr) {},
             success: function (data) {
-                responseDiv.innerHTML = data;
-                //Refresh html for total items in cart
-                $('#cart_total_items').load(document.URL +  ' #cart_total_items');
-                //Refresh html for total items in cart END
+                updateShoppingCart()
             },
             complete: function (xhr, status) {
-                openSideCart();
-
-                if( customSideCart.hasClass('checkout_page') && !customSideCart.find('.items .item').length ) {
-                    window.location.href = '/';
+                if( $(".cart").hasClass('checkout_page') && !$(".cart").find('.items .item').length ) {
+                    window.location.href = '/'
                 }
             },
-        });
+        })
     }
-    //Update items in shopping cart END
 
-    //Event after adding to cart action
-    $("body").on("added_to_cart", function () {
-        updateShoppingCart(true);
-    });
-    //Event after adding to cart action END
+    /**
+     * Remove PRODUCT from CART function
+     * **/
+    function removeItemFromCart(item) {
+        cartIsUpdating(true)
 
-    //Remove item from cart function
-    customSideCart.on("click", ".remove_item", function (event) {
-        event.preventDefault();
-        let cartItemKey = $(this).data("target");
         $.ajax({
-            url: $('.custom_side_cart').data('action'),
+            url: $('.cart').data('action'),
             data: {
-                action: "woo_custom_remove_from_cart",
-                cartItemKey: cartItemKey,
+                action: "woo_custom_cart_remove_from_cart",
+                cartItemKey: item,
             },
             type: "POST", // POST
             beforeSend: function (xhr) {
-                $("#cart_item_" + cartItemKey).slideUp(250);
+                $("#cart_item_" + item).slideUp(250)
             },
             success: function (data) {
-                if( bookableSingleProductPage.length ) {
-                    wc_bookings_booking_form.wc_bookings_date_picker.init();
-                }
+                updateShoppingCart()
 
-                if( checkOutPage.length ) {
-                    $('body').trigger('update_checkout');
-                }
-
-                setTimeout(function(){
-                    updateShoppingCart();
-                }, 250);
+                // if( checkOutPage.length ) {
+                //     $('body').trigger('update_checkout')
+                // }
             },
             complete: function (xhr, status) {},
-        });
-    });
-    //Remove item from cart function END
-})(jQuery);
+        })
+    }
+
+    /**
+     * Update/Rerender CART
+     * **/
+    function updateShoppingCart() {
+        let cartResponse = document.getElementById("cart-response")
+
+        $.ajax({
+            url: $(".cart").data("action"),
+            data: {
+                action: "woo_custom_cart_update",
+            },
+            type: "POST",
+            beforeSend: function (xhr) {},
+            success: function (data) {
+                $(cartResponse).html(data)
+            },
+            complete: function (xhr, status) {
+                openSideCart()
+
+                if( $(".cart").hasClass('checkout_page') && !$(".cart").find('.items .item').length ) {
+                    window.location.href = '/'
+                }
+
+                setTimeout(function (){
+                    cartIsUpdating(false)
+                }, 200)
+            },
+            // error: function (err) {}
+        })
+    }
+
+    $(document).on('change', '.cart__item--quantity-input', function () {
+        let cartItemKey = $(this).data('item-id')
+        let quantity = $(this).val()
+        updateItemQuantity(cartItemKey, quantity)
+    })
+
+    /**
+     * Update CART ITEM quantity function
+     * **/
+    function updateItemQuantity(cartItemKey, quantity) {
+        cartIsUpdating(true)
+
+        $.ajax({
+            url: $('.cart').data('action'),
+            data: {
+                action: "woo_custom_cart_update_cart_item_quantity",
+                cartItemKey: cartItemKey,
+                quantity: quantity,
+            },
+            type: "POST", // POST
+            beforeSend: function (xhr) {},
+            success: function (data) {
+                updateShoppingCart()
+            },
+            complete: function (xhr, status) {},
+        })
+    }
+
+    function cartIsUpdating(flag = true) {
+        if( flag ) {
+            $('.cart').addClass('cart--updating')
+            $(".cart input, .cart button").prop('disabled', true)
+        } else {
+            $('.cart').removeClass('cart--updating')
+            $(".cart input, .cart button").prop('disabled', false)
+        }
+    }
+})(jQuery)
