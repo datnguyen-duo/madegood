@@ -668,6 +668,75 @@ a {
   animation: spin 2s linear infinite;
 }
 
+.default-page {
+  padding: 8rem 2rem 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  &__heading {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #000;
+  }
+  &__content {
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6,
+    > ul,
+    > ol {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    & > p {
+      line-height: 1.2;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    figure {
+      max-width: 100%;
+    }
+
+    a {
+      color: $color-red;
+      text-decoration: underline;
+    }
+
+    ol {
+      padding-left: 1em;
+      li {
+        list-style-type: decimal;
+      }
+    }
+
+    ul {
+      padding-left: 1em;
+      li {
+        list-style-type: disc;
+      }
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    hr {
+      margin: 2rem 0;
+    }
+  }
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

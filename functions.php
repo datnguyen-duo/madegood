@@ -2,11 +2,9 @@
 
 function load_stylesheets()
 {
-    wp_register_style('stylesheet-inline', get_template_directory_uri() . '/style-inline.css', array(), false, 'all');
-	wp_register_style('stylesheet', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
 	wp_enqueue_style('fonts', '//webfonts3.radimpesko.com/RP-W-ff9519f0-8b59-41be-9ba0-3ff43e58d308', array(), false, 'all');
-    wp_enqueue_style('stylesheet-inline');
-    wp_enqueue_style('stylesheet');
+    wp_enqueue_style( 'stylesheet-inline', get_stylesheet_directory_uri() . '/style-inline.css', array(), filemtime(get_stylesheet_directory() . '/style-inline.css') );
+	wp_enqueue_style( 'stylesheet', get_stylesheet_directory_uri() . '/style.css', array(), filemtime(get_stylesheet_directory() . '/style.css') );
 }
 
 function load_scripts()
